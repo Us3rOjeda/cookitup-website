@@ -8,9 +8,14 @@ import Link from "next/link";
 import { RecipeDetails, RecipeDishTypes, RecipeIngredients} from "@/lib/constants/dynamic-imports/dynamicImports"
 import Image from "next/image";
 
-function RecipePage({ params }: { params: { id: string } }) {
-  const id = params.id;
+type RecipePageProps = {
+  params: {
+    id: string;
+  };
+};
 
+function RecipePage({ params }: RecipePageProps) {
+  const id = params.id;
   const { recipe, loading } = useFetchRecipeById(id);
 
   if (!id) {
