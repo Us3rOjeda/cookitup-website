@@ -2,16 +2,14 @@
 
 import ArrowSVG from "@/components/atoms/icons/ArrowSVG";
 import useFetchRecipeById from "@/lib/hooks/useFetchRecipeById";
-import {CormorantGaramond} from "../../../public/fonts/fonts";
-import { useSearchParams } from "next/navigation";
+import {CormorantGaramond} from "../../../../public/fonts/fonts";
 import cutSummaryAfterThirdPeriod from "@/lib/helpers/cutSummaryAfterThirdPeriod";
 import Link from "next/link";
 import { RecipeDetails, RecipeDishTypes, RecipeIngredients} from "@/lib/constants/dynamic-imports/dynamicImports"
 import Image from "next/image";
 
-function RecipePage() {
-  const searchParams = useSearchParams();
-  const id = searchParams.get('recipe-id');
+function RecipePage({ params }: { params: { id: string } }) {
+  const id = params.id;
 
   const { recipe, loading } = useFetchRecipeById(id);
 
