@@ -9,7 +9,10 @@ import Link from "next/link";
 import { RecipeDetails, RecipeDishTypes, RecipeIngredients} from "@/lib/constants/dynamic-imports/dynamicImports"
 import Image from "next/image";
 
-function RecipeTemplate({ id }: { id: string }) {
+function RecipePage() {
+  const searchParams = useSearchParams();
+  const id = searchParams.get('recipe-id');
+
   const { recipe, loading } = useFetchRecipeById(id);
 
   if (!id) {
@@ -124,4 +127,4 @@ function RecipeTemplate({ id }: { id: string }) {
   );
 }
 
-export default RecipeTemplate;
+export default RecipePage;

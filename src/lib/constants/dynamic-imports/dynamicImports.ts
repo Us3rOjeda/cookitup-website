@@ -6,4 +6,3 @@ export const RecipeIngredients = dynamic(() => import('@/components/molecules/Re
 export const RenderRandomRecipes = dynamic(() => import('@/components/organisms/RenderRandomRecipes'), {ssr: true});
 export const Footer = dynamic(() => import('@/components/templates/Footer'), {ssr: true});
 export const FooterContent = dynamic(() => import('@/components/atoms/FooterContent'), {ssr: true});
-export const RecipeTemplate = dynamic(() => import('@/components/templates/RecipeTemplate'), {ssr: false});
