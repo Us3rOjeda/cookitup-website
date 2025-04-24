@@ -10,7 +10,7 @@ import Image from "next/image";
 
 type RecipePageProps = {
   params: {
-    id: string;
+    id: string | null;
   };
 };
 
