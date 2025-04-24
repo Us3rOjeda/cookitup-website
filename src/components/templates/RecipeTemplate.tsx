@@ -13,13 +13,13 @@ function RecipeTemplate() {
   const searchParams = useSearchParams();
   const id = searchParams.get('recipe-id');
 
+  const { recipe, loading } = useFetchRecipeById(id);
+
   if (!id) {
     return <div className={`${CormorantGaramond.className} w-full h-screen flex items-center justify-center bg-[#192a1f] text-7xl text-center text-red-500`}>
       Error: No recipeId provided
     </div>;
   }
-
-  const { recipe, loading } = useFetchRecipeById(id);
 
   if (loading) {
     return <div className={`${CormorantGaramond.className} w-full h-screen flex items-center justify-center bg-[#192a1f] text-7xl text-[#ddded0] text-center italic`}>

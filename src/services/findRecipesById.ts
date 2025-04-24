@@ -19,4 +19,4 @@ async function findRecipesById(id: string): Promise<RecipeWithID | null> {
   }
 }
 
-export default findRecipesById;
+export default findRecipesById; 

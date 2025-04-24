@@ -19,7 +19,7 @@ export interface Recipe {
   missedIngredientCount: number;
   missedIngredients: Ingredient[];
   usedIngredients: Ingredient[];
-  unusedIngredients: any[];
+  unusedIngredients: Ingredient[];
   likes: number;
 };
 
