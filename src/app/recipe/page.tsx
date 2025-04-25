@@ -8,7 +8,7 @@ import Link from "next/link";
 import { RecipeDetails, RecipeDishTypes, RecipeIngredients} from "@/lib/constants/dynamic-imports/dynamicImports"
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-
+import { Suspense } from "react";
 
 function RecipePage() {
   const searchParams = useSearchParams();
@@ -128,4 +128,15 @@ function RecipePage() {
   );
 }
 
-export default RecipePage;
+export default function SuspendedRecipePage() {
+  return (
+    <Suspense 
+    fallback={
+      <div className={`${CormorantGaramond.className} w-full h-screen flex items-center justify-center bg-[#192a1f] text-7xl text-[#ddded0] text-center italic`}>
+        Loading...
+      </div>}>
+      <RecipePage />
+    </Suspense>
+  );
+}
+
