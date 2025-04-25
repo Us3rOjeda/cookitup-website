@@ -26,7 +26,7 @@ function Card({
         2xl:w-[400px] 2xl:h-[500px] rounded-4xl shadow-4xl 
         overflow-hidden card__article"
       >
-        <Image width={100} height={100} src={image} alt={title} className="card__img object-cover" />
+        <img src={image} alt={title} className="card__img object-cover" />
         <div className="card__shadow"></div>
 
         <div className="card__clip">
