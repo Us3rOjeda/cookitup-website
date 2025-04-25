@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 
-function useNearScreen () {
+function useNearScreen (): { isNearScreen: boolean; elementRef: React.RefObject<HTMLDivElement | null> } {
   const [isNearScreen, setIsNearScreen] = useState(false);
   const elementRef = useRef<HTMLDivElement | null>(null);
 

@@ -14,4 +14,4 @@ function decimalToFraction(decimal: number): string {
   return `${h1}/${k1}`;
 }
 
-export default decimalToFraction
+export default decimalToFraction;

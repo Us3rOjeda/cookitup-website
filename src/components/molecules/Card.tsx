@@ -55,7 +55,7 @@ function Card({
 
           <div className="flex flex-row justify-between w-full items-center">
             <Link
-              href={`/recipe/${id}`}
+              href={`/recipe?recipe-id=${id}`}
               className="inline-flex bg-[#ff5e00] py-[0.5rem]
               px-[0.75rem] md:w-[8.5rem] md:h-[2.6875rem] rounded-4xl
               items-center justify-center cursor-pointer text-white 

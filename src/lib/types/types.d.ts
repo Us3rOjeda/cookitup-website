@@ -168,3 +168,7 @@ export interface RandomCardProps {
   image: string;
   title: string;
 };
+
+export interface SumRecipesProps {
+  setCountRecipes: React.Dispatch<React.SetStateAction<number>>;
+};

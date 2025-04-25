@@ -1,8 +1,9 @@
 import { API_URL } from "@/lib/constants/API_URL";
+import { RandomRecipe } from "@/lib/types/types";
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = '479d8c50e3d74d3fbaf12d8c2e331d5a';
 
-async function getRandomRecipes() {
+async function getRandomRecipes(): Promise<RandomRecipe[]> {
   try {
     const response = await fetch(`${API_URL}random?number=8&apiKey=${API_KEY}`);
 
@@ -12,7 +13,7 @@ async function getRandomRecipes() {
 
     const data = await response.json();
     return data.recipes;
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Ups! There was an error with the fetch operation:', error);
     return []; 
   }
