@@ -5,7 +5,6 @@ import { CardProps } from "../../lib/types/types";
 import HeartSVG from '../atoms/icons/HeartSVG';
 import MenuSVG from '../atoms/icons/MenuSVG';
 import Link from "next/link";
-import Image from "next/image";
 import {CormorantGaramond} from "../../../public/fonts/fonts"
 import "../../styles/card.css";
 
