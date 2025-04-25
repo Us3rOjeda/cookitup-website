@@ -5,6 +5,7 @@ import { CardProps } from "../../lib/types/types";
 import HeartSVG from '../atoms/icons/HeartSVG';
 import MenuSVG from '../atoms/icons/MenuSVG';
 import Link from "next/link";
+import Image from "next/image";
 import {CormorantGaramond} from "../../../public/fonts/fonts"
 import "../../styles/card.css";
 
@@ -25,7 +26,7 @@ function Card({
         2xl:w-[400px] 2xl:h-[500px] rounded-4xl shadow-4xl 
         overflow-hidden card__article"
       >
-        <img src={image} alt={title} className="card__img object-cover" />
+        <Image width={100} height={100} src={image} alt={title} className="card__img object-cover" />
         <div className="card__shadow"></div>
 
         <div className="card__clip">

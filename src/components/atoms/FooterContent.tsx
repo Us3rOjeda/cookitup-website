@@ -7,7 +7,7 @@ function FooterContent () {
       ${CormorantGaramond.className} flex flex-col gap-10
       text-4xl items-center
       `}>
-        <a href="https://github.com/Us3rOjeda" 
+        <a href="https://github.com/Us3rOjeda" target="_blank"
         className="relative inline-block text-[#f9f4e9] 
         no-underline pb-1 group hover:text-white">
           GitHub
@@ -16,6 +16,7 @@ function FooterContent () {
           transtion-all ease-in-out duration-500"></span>
         </a>
         <a href="https://www.linkedin.com/in/us3r0jeda6161/" 
+        target="_blank"
         className="relative inline-block text-[#f9f4e9] 
         no-underline pb-1 group hover:text-white">
           LinkedIn
@@ -23,7 +24,8 @@ function FooterContent () {
           w-full h-[2px] hover:bg-white bg-[#f9f4e9]
           transtion-all ease-in-out duration-500"></span>
         </a>
-        <a href="https://portfolio-website-o3xw.onrender.com" 
+        <a href="https://portfolio-website-o3xw.onrender.com"
+        target="_blank" 
         className="relative inline-block text-[#f9f4e9] 
         no-underline pb-1 group hover:text-white">
           Portfolio
